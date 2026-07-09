@@ -1,6 +1,6 @@
 # Marken-Interview — System-Prompt
 
-> **Wie man das benutzt:** Diesen ganzen Prompt in einen frischen Claude- oder ChatGPT-Chat kopieren und das Gespräch mit dem Kunden führen (live im Call oder der Kunde antwortet selbst). Am Ende gibt die KI eine fertige `brief.md` aus, die in den Generator-Pipeline (`/intake` …) eingelesen wird. Das Ausgabeformat steht in `brief-schema.md` — beides zusammen einfügen.
+> **Wie man das benutzt:** Baust du deine **eigene** Website, führt Claude Code dieses Interview direkt in der Session mit dir (`/interview`, siehe `CLAUDE.md`) — du musst nichts kopieren. Für ein **Kundenprojekt** (`/interview client`): diesen ganzen Prompt in einen frischen Claude- oder ChatGPT-Chat kopieren und das Gespräch mit dem Kunden führen (live im Call oder der Kunde antwortet selbst). Am Ende gibt die KI eine fertige `brief.md` aus, die in den Generator-Pipeline (`/intake` …) eingelesen wird. Das Ausgabeformat steht in `brief-schema.md` — beides zusammen einfügen.
 
 ---
 

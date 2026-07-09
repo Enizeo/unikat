@@ -1,4 +1,7 @@
-# Website Builder — distinctive site generator (v2)
+# Unikat — distinctive site generator
+
+*Unikat (German): a one-of-a-kind piece. The promise of this generator: a site that could
+only belong to this one brand — never a template.*
 
 Turn a client brief into a **distinctive**, multi-page, conversion-focused website
 (Next.js 16 · React 19 · Tailwind v4 · brand-derived token system). The design is
@@ -13,25 +16,25 @@ branch) created from it. The starter evolves here on `main`; examples live on
 
 ## Schnellstart (Deutsch)
 
-So kommst du von null zur ersten Website:
+So baust du deine **eigene** Website — du brauchst keinerlei Programmier-Erfahrung:
 
-1. **Repo anlegen:** Oben rechts auf **"Use this template" → "Create a new repository"** klicken. Ein Repo pro Kundenprojekt.
-2. **Voraussetzungen:** [Node.js](https://nodejs.org) (Version 20+), [Claude Code](https://claude.com/claude-code) und ein GitHub-Account. Repo klonen, dann im Projektordner einmal `npm install` ausführen.
-3. **Claude Code im Projektordner starten.** Alle Befehle unten (`/interview`, `/intake`, …) sind Slash-Commands in Claude Code — sie liegen in `.claude/commands/` und werden automatisch erkannt.
-4. **Brief erstellen:** `/interview` baut dir das deutsche Interview-Prompt-Paket für das Kundengespräch. Das Ergebnis kommt nach `ai/brief.md`. (Zum Ausprobieren ohne Kunden: das Repo enthält bereits ein ausgefülltes Beispiel-Brief.)
-5. **Stufen 1–7 durchlaufen** (Tabelle unten): `/intake` → `/art-direction` → `/direction-gate` → `/design-system` → `/build-site` → `/review` → `/visual-review`. Die eine große menschliche Entscheidung ist Stufe 3: die Design-Richtung wählen. Danach: selbst anschauen, deployen (z. B. Vercel).
+1. **Repo anlegen:** Oben rechts auf **"Use this template" → "Create a new repository"** klicken (GitHub-Account nötig). Ein Repo pro Website.
+2. **Voraussetzungen installieren:** [Node.js](https://nodejs.org) (Version 20+) und [Claude Code](https://claude.com/claude-code). Dann das Repo klonen (in VS Code: "Clone Git Repository" und die URL deines neuen Repos einfügen).
+3. **Claude Code im Projektordner starten** und einfach schreiben: *"Ich will meine Website bauen — führ mich durch."* Claude kennt den ganzen Ablauf (steht in `CLAUDE.md`), erledigt die Technik (`npm install` etc.) und führt dich auf Deutsch durch alle Stufen.
+4. **Das Interview:** Claude interviewt dich direkt im Chat zu deinem Business (~20–30 Min) — Geschichte, Angebot, Fakten. Wichtig: Es fragt bewusst **nicht** nach Farben oder Design. Das Design entsteht später — deine Entscheidung ist die Wahl zwischen 2–3 fertigen Design-Richtungen.
+5. **Danach laufen die Stufen 1–7** (Tabelle unten) unter Claudes Führung durch: Planung → Design-Richtungen → deine Wahl → Aufbau → zwei KI-Qualitätsprüfungen. Am Ende: anschauen, feedbacken, live gehen (z. B. Vercel — auch dabei führt dich Claude).
 
-Die komplette Doku unten ist auf Englisch — die Referenzdateien unter `ai/` erklären jede Stufe im Detail. Fragen? Einfach Claude Code im Repo fragen, es kennt den ganzen Aufbau.
+Die Doku unten ist auf Englisch — musst du nicht lesen. Fragen? Einfach Claude im Repo fragen, es kennt den ganzen Aufbau. Baust du eine Site **für jemand anderen** (Kundenprojekt), nutze `/interview client` für das externe Kundeninterview.
 
 ## How to build a site — the 8 stages
 
-The brief is collected by an **AI interview** with the client (run outside the repo);
-everything else runs as Claude Code slash commands. Most gates are AI; the one heavy
+The brief is collected by an **AI interview** — in-session when you build your own site,
+via an external prompt-pack for client projects. Everything runs as Claude Code slash commands. Most gates are AI; the one heavy
 human decision is picking the winning art direction.
 
 | Stage | Command | Does | Gate |
 |---|---|---|---|
-| 0 | `/interview` | Assembles the German interview prompt-pack; you run it with the client → paste the emitted brief into `ai/brief.md` | — |
+| 0 | `/interview` | Runs the German brand interview **in-session** with the site owner and writes `ai/brief.md` (`/interview client`: emits the prompt-pack for an external client interview instead) | — |
 | 1 | `/intake` | Picks sections per page → `ai/_generated/site-plan.md` (structure only, no code) | Skim the plan |
 | 2 | `/art-direction` | Originates 2–3 divergent design directions (sketch level) | — |
 | 3 | `/direction-gate` | AI judge ranks them; you confirm a winner → `winner.txt` | **Pick winner** |
@@ -94,7 +97,8 @@ rm -rf components/sections components/navbar.tsx app/design-system app/impressum
 
 ## Examples
 
-- `example/northline` branch — a full dark, data-forward B2B build generated end-to-end from `ai/brief.md`.
+- `ai/brief.md` ships filled with the fictional **"Northline"** brief (dark, data-forward B2B) so the schema is self-documenting; `ai/_examples/sparse-plumber.md` shows a deliberately thin brief.
+- Full example builds will live on `example/*` branches as they are added.
 
 ## Local dev
 
