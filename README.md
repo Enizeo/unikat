@@ -20,6 +20,7 @@ So baust du deine **eigene** Website — du brauchst keinerlei Programmier-Erfah
 
 1. **Repo anlegen:** Oben rechts auf **"Use this template" → "Create a new repository"** klicken (GitHub-Account nötig). Ein Repo pro Website.
 2. **Voraussetzungen installieren:** [Node.js](https://nodejs.org) (Version 20+) und [Claude Code](https://claude.com/claude-code). Dann das Repo klonen (in VS Code: "Clone Git Repository" und die URL deines neuen Repos einfügen).
+   *Hinweis zu npm 11+:* Beim `npm install` fragt npm nach, ob die Install-Skripte von `sharp` und `unrs-resolver` laufen dürfen — beide freigeben. Ohne `sharp` fehlt die Bildoptimierung.
 3. **Claude Code im Projektordner starten** und einfach schreiben: *"Ich will meine Website bauen — führ mich durch."* Claude kennt den ganzen Ablauf (steht in `CLAUDE.md`), erledigt die Technik (`npm install` etc.) und führt dich auf Deutsch durch alle Stufen.
 4. **Das Interview:** Claude interviewt dich direkt im Chat zu deinem Business (~20–30 Min) — Geschichte, Angebot, Fakten. Wichtig: Es fragt bewusst **nicht** nach Farben oder Design. Das Design entsteht später — deine Entscheidung ist die Wahl zwischen 2–3 fertigen Design-Richtungen.
 5. **Danach laufen die Stufen 1–7** (Tabelle unten) unter Claudes Führung durch: Planung → Design-Richtungen → deine Wahl → Aufbau → zwei KI-Qualitätsprüfungen. Am Ende: anschauen, feedbacken, live gehen (z. B. Vercel — auch dabei führt dich Claude).
